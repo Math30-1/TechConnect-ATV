@@ -1,6 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content
-    </head> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechFuture Summit 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>TechFuture Summit 2025</h1>
+    <p>O futuro da tecnologia e do design em um só lugar!</p>
+  </header>
+
+  <section class="sobre">
+    <h2>Sobre o Evento</h2>
+    <p><strong>Data:</strong> 15 de agosto de 2025</p>
+    <p><strong>Local:</strong> Centro de Convenções, Salvador - BA</p>
+    <p>Reunindo desenvolvedores e designers para debater tendências de tecnologia e UX/UI.</p>
+  </section>
+
+  <section class="palestrantes">
+    <h2>Palestrantes</h2>
+    <div class="card">
+      <img src="Vinicius Matos.jpeg" alt="Foto Vinicius Matos">
+      <h3>Vinicius Matos</h3>
+      <p>UX Designer na Google. Especialista em acessibilidade digital.</p>
+    </div>
+    <div class="card">
+      <img src="matheus foto z.png" alt="Foto Matheus Rocha">
+      <h3>Matheus Rocha</h3>
+      <p>Desenvolvedor Fullstack na Meta. Trabalha com IA e React.</p>
+    </div>
+  </section>
+
+  <section class="formulario">
+    <h2>Inscreva-se</h2>
+    <form action="#" method="POST">
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required />
+
+      <p>Tipo de ingresso:</p>
+      <label><input type="radio" name="ingresso" value="presencial" required /> Presencial</label>
+      <label><input type="radio" name="ingresso" value="online" required /> Online</label>
+
+      <label>
+        <input type="checkbox" required />
+        Aceito os termos e condições
+      </label>
+
+      <button type="submit">Enviar Inscrição</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TechConnect - Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header.hero {
+  background-color: #152191;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+section {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.palestrantes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e055a0;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .palestrantes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
